@@ -1,0 +1,19 @@
+jwt:
+  tokenHeader: Authorization
+  secret: rex-secret
+  expiration: 604800
+  tokenHead: Bearer
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3308/rex
+    username: root
+    password: wei123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MysqlSQLDialect
+server:
+  port: 3000
