@@ -1,19 +1,39 @@
 jwt:
   tokenHeader: Authorization
-  secret: rex-secret
+  secret: rex
   expiration: 604800
   tokenHead: Bearer
 
 spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
   datasource:
     url: jdbc:mysql://localhost:3308/rex
     username: root
     password: wei123
-
   jpa:
     hibernate:
       ddl-auto: update
     properties:
-      hibernate.dialect: org.hibernate.dialect.MysqlSQLDialect
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect  # Corrected dialect
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+    suffix: .html
+    cache: false
+
+
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
 server:
-  port: 3000
+  port: 4000
+
+
+logging:
+  level:
+    com.rex.productionserver: DEBUG
+

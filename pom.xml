@@ -9,7 +9,11 @@
     <module>production-server</module>
   </modules>
   <packaging>pom</packaging>
-
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <version>2.7.1</version>
+  </parent>
 
 
 
@@ -17,7 +21,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <spring.boot.version>2.5.0</spring.boot.version>
+    <spring.boot.version>2.7.1</spring.boot.version>
   </properties>
 
   <dependencies>

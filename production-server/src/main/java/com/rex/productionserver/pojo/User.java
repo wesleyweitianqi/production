@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,4 +22,12 @@ public class User {
      private String username;
      @Column(name="password")
      private String password;
+
+     @ManyToMany(fetch = FetchType.EAGER) // Assuming roles are eagerly fetched
+     @JoinTable(
+             name = "user_roles",
+             joinColumns = @JoinColumn(name = "user_id"),
+             inverseJoinColumns = @JoinColumn(name = "role_id")
+     )
+     private List<Role> roles;
 }

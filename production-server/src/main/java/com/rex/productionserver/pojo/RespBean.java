@@ -1,4 +1,4 @@
-package com.rex.productionserver.repo;
+package com.rex.productionserver.pojo;
 
 
 import lombok.AllArgsConstructor;
