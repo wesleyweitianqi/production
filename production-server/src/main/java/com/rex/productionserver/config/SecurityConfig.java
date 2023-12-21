@@ -60,7 +60,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/**/*.html",
                 "/favicon.ico",
                 "/login.html",
-                "/welcome"
+                "/welcome",
+                "/doc.html"
         );
     }
     @Override
